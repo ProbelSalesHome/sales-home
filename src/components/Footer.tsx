@@ -6,7 +6,7 @@ const Footer = () => {
       <div className="container mx-auto max-w-6xl">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           <div>
-            <img src="/logo-probel.svg" alt="Sales Home – Probel Exclusiva" className="h-10 mb-4" />
+            <img src="/images/logo-probel.png" alt="Sales Home – Probel Exclusiva" className="h-14 mb-4" />
             <p className="text-sm opacity-80">Grupo Sales Home – Probel Exclusiva</p>
           </div>
 

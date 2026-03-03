@@ -4,29 +4,32 @@ import { motion } from "framer-motion";
 const stores = [
   {
     name: "Probel Exclusiva – Shopping União",
-    address: "Shopping União De Osasco\nAv. dos Autonomistas, 1400 – Loja 326\nVila Yara – Osasco/SP",
+    image: "/images/store-shopping-uniao.jpg",
+    address: "Shopping União De Osasco\nAv. dos Autonomistas, 1400 – Loja 326\nVila Yara, Osasco – SP, 06020-010",
     phone: "(11) 99140-3080",
     phoneLink: "tel:+5511991403080",
     whatsapp: "https://wa.me/5511991403080",
-    maps: "https://www.google.com/maps/place/Probel+Exclusiva+-+Shopping+Uni%C3%A3o/",
+    maps: "https://www.google.com/maps/place/Probel+Exclusiva+-+Shopping+Uni%C3%A3o/@-23.5369738,-46.7672379,17z",
     rating: "4,9",
   },
   {
     name: "Probel Exclusiva – Autonomista",
-    address: "Av. dos Autonomistas, 3086\nCentro – Osasco/SP",
+    image: "/images/store-autonomista.jpg",
+    address: "Av. dos Autonomistas, 3086\nCentro, Osasco – SP, 06090-015",
     phone: "(11) 98814-4671",
     phoneLink: "tel:+5511988144671",
     whatsapp: "https://wa.me/5511988144671",
-    maps: "https://www.google.com/maps/place/Probel+Exclusiva+-+Autonomista/",
+    maps: "https://www.google.com/maps/place/Probel+Exclusiva+-+Autonomista/@-23.535218,-46.7842654,17z",
     rating: "4,9",
   },
   {
     name: "Probel Exclusiva – Shopping Internacional Guarulhos",
-    address: "Rod. Pres. Dutra, 225\nVila Itapegica – Guarulhos/SP",
+    image: "/images/store-guarulhos.jpg",
+    address: "Rod. Pres. Dutra, 225\nVila Itapegica, Guarulhos – SP, 07034-911",
     phone: "(11) 94521-3145",
     phoneLink: "tel:+5511945213145",
     whatsapp: "https://wa.me/5511945213145",
-    maps: "https://www.google.com/maps/place/Probel+Exclusiva+Shopping+Internacional+Guarulhos/",
+    maps: "https://www.google.com/maps/place/Probel+Exclusiva+Shopping+Internacional+Guarulhos/@-23.4897768,-46.5515392,17z",
     rating: "4,9",
   },
 ];
@@ -54,11 +57,13 @@ const StoresSection = () => {
               viewport={{ once: true }}
               transition={{ delay: index * 0.15 }}
             >
-              <div className="bg-institutional h-44 flex items-center justify-center">
-                <div className="text-center text-primary-foreground">
-                  <MapPin className="w-10 h-10 mx-auto mb-2 text-gold" />
-                  <p className="text-sm font-medium opacity-80">Loja Física</p>
-                </div>
+              <div className="h-48 overflow-hidden">
+                <img
+                  src={store.image}
+                  alt={`Fachada ${store.name}`}
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
+                />
               </div>
 
               <div className="p-6">
