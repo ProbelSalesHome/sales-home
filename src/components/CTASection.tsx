@@ -6,10 +6,10 @@ const CTASection = () => {
   };
 
   return (
-    <section className="py-16 md:py-24 px-4 bg-institutional text-primary-foreground">
+    <section className="py-20 md:py-28 px-4 bg-institutional text-primary-foreground">
       <div className="container mx-auto max-w-3xl text-center">
         <motion.h2
-          className="text-3xl md:text-4xl font-bold mb-8"
+          className="text-3xl md:text-4xl font-semibold mb-10"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -19,7 +19,9 @@ const CTASection = () => {
 
         <motion.button
           onClick={scrollToStores}
-          className="inline-flex items-center gap-2 bg-gold hover:bg-gold-dark text-primary-foreground font-semibold px-10 py-4 rounded-lg text-lg transition-all hover:scale-105 shadow-lg"
+          className="inline-flex items-center gap-2 bg-gold hover:bg-gold-dark text-primary-foreground font-semibold px-10 py-4 rounded-xl text-lg transition-all shadow-lg active:scale-[0.98]"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.98 }}
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -7,24 +7,24 @@
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 213 56% 16%;
+    --foreground: 209 83% 29%;
 
     --card: 0 0% 100%;
-    --card-foreground: 213 56% 16%;
+    --card-foreground: 209 83% 29%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 213 56% 16%;
+    --popover-foreground: 209 83% 29%;
 
-    --primary: 213 63% 32%;
+    --primary: 209 83% 29%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 214 33% 97%;
-    --secondary-foreground: 213 56% 16%;
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 209 83% 29%;
 
-    --muted: 214 33% 97%;
-    --muted-foreground: 213 10% 45%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 209 15% 45%;
 
-    --accent: 39 52% 58%;
+    --accent: 42 43% 57%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
@@ -32,16 +32,16 @@
 
     --border: 214 20% 90%;
     --input: 214 20% 90%;
-    --ring: 213 63% 32%;
+    --ring: 209 83% 29%;
 
     --radius: 0.75rem;
 
-    --gold: 39 52% 58%;
-    --gold-light: 39 52% 68%;
-    --gold-dark: 39 52% 48%;
-    --institutional: 213 63% 32%;
-    --institutional-dark: 213 63% 25%;
-    --gray-light: 214 33% 97%;
+    --gold: 42 43% 57%;
+    --gold-light: 42 43% 67%;
+    --gold-dark: 42 43% 47%;
+    --institutional: 209 83% 29%;
+    --institutional-dark: 209 83% 22%;
+    --gray-light: 0 0% 96%;
   }
 }
 
@@ -51,10 +51,16 @@
   }
   body {
     @apply bg-background text-foreground;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Open Sans', 'Montserrat', sans-serif;
   }
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'League Spartan', 'Montserrat', sans-serif;
+  }
+  h1 {
+    @apply font-bold;
+  }
+  h2 {
+    @apply font-semibold;
   }
   html {
     scroll-behavior: smooth;

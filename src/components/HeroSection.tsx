@@ -7,8 +7,7 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="bg-institutional text-primary-foreground py-16 md:py-28 px-4 relative overflow-hidden">
-      {/* Background decorative elements */}
+    <section className="bg-institutional text-primary-foreground py-20 md:py-32 px-4 relative overflow-hidden">
       <motion.div
         className="absolute top-0 right-0 w-96 h-96 rounded-full bg-gold/5 blur-3xl"
         animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.5, 0.3] }}
@@ -24,7 +23,7 @@ const HeroSection = () => {
         <motion.img
           src="/images/logo-probel.png"
           alt="Sales Home – Probel Exclusiva"
-          className="h-20 md:h-28 mx-auto mb-10 drop-shadow-lg"
+          className="h-20 md:h-28 mx-auto mb-12 drop-shadow-lg"
           initial={{ opacity: 0, scale: 0.8, y: -30 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
@@ -32,7 +31,7 @@ const HeroSection = () => {
 
         <div className="overflow-hidden">
           <motion.h1
-            className="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6"
+            className="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 tracking-tight"
             initial={{ opacity: 0, y: 60 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
@@ -50,7 +49,7 @@ const HeroSection = () => {
         </div>
 
         <motion.p
-          className="text-lg md:text-xl opacity-90 mb-10 max-w-2xl mx-auto leading-relaxed"
+          className="text-lg md:text-xl opacity-90 mb-12 max-w-2xl mx-auto leading-relaxed"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.6, ease: "easeOut" }}
@@ -60,14 +59,14 @@ const HeroSection = () => {
         </motion.p>
 
         <motion.div
-          className="flex flex-col sm:flex-row gap-4 justify-center mb-12"
+          className="flex flex-col sm:flex-row gap-4 justify-center mb-14"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.8, ease: "easeOut" }}
         >
           <motion.button
             onClick={scrollToStores}
-            className="inline-flex items-center justify-center gap-2 bg-gold hover:bg-gold-dark text-primary-foreground font-semibold px-8 py-4 rounded-lg text-lg transition-colors shadow-lg shadow-gold/30"
+            className="inline-flex items-center justify-center gap-2 bg-gold hover:bg-gold-dark text-primary-foreground font-semibold px-8 py-4 rounded-xl text-lg transition-colors shadow-lg shadow-gold/30 active:scale-[0.98]"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.98 }}
           >
@@ -76,7 +75,7 @@ const HeroSection = () => {
           </motion.button>
           <motion.button
             onClick={scrollToStores}
-            className="inline-flex items-center justify-center gap-2 border-2 border-primary-foreground/80 text-primary-foreground font-semibold px-8 py-4 rounded-lg text-lg transition-colors hover:bg-primary-foreground/10"
+            className="inline-flex items-center justify-center gap-2 border-2 border-primary-foreground/80 text-primary-foreground font-semibold px-8 py-4 rounded-xl text-lg transition-colors hover:bg-primary-foreground/10 active:scale-[0.98]"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.98 }}
           >

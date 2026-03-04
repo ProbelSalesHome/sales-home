@@ -7,10 +7,10 @@ const GuaranteeSection = () => {
   };
 
   return (
-    <section className="py-16 md:py-24 px-4 bg-institutional text-primary-foreground">
+    <section className="py-20 md:py-28 px-4 bg-institutional text-primary-foreground">
       <div className="container mx-auto max-w-4xl text-center">
         <motion.h2
-          className="text-3xl md:text-4xl font-bold mb-6"
+          className="text-3xl md:text-4xl font-semibold mb-6"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -19,7 +19,7 @@ const GuaranteeSection = () => {
         </motion.h2>
 
         <motion.p
-          className="text-lg opacity-90 mb-10 max-w-xl mx-auto leading-relaxed"
+          className="text-lg opacity-90 mb-12 max-w-xl mx-auto leading-relaxed"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -31,7 +31,7 @@ const GuaranteeSection = () => {
         </motion.p>
 
         <motion.div
-          className="flex flex-col sm:flex-row gap-6 justify-center mb-12"
+          className="flex flex-col sm:flex-row gap-8 justify-center mb-14"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -51,7 +51,9 @@ const GuaranteeSection = () => {
 
         <motion.button
           onClick={scrollToStores}
-          className="inline-flex items-center gap-2 bg-gold hover:bg-gold-dark text-primary-foreground font-semibold px-10 py-4 rounded-lg text-lg transition-all hover:scale-105 shadow-lg"
+          className="inline-flex items-center gap-2 bg-gold hover:bg-gold-dark text-primary-foreground font-semibold px-10 py-4 rounded-xl text-lg transition-all shadow-lg active:scale-[0.98]"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.98 }}
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}

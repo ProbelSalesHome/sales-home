@@ -11,10 +11,10 @@ const mattresses = [
 
 const MattressSection = () => {
   return (
-    <section className="py-16 md:py-24 px-4 bg-background">
+    <section className="py-20 md:py-28 px-4 bg-gray-light">
       <div className="container mx-auto max-w-5xl">
         <motion.h2
-          className="text-3xl md:text-4xl font-bold text-center text-foreground mb-12"
+          className="text-3xl md:text-4xl font-semibold text-center text-foreground mb-14"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -26,13 +26,13 @@ const MattressSection = () => {
           {mattresses.map((m, i) => (
             <motion.div
               key={i}
-              className="p-6 rounded-xl bg-card border border-border hover:shadow-md transition-shadow text-center"
+              className="p-6 rounded-2xl bg-card shadow-sm hover:shadow-md transition-shadow duration-300 text-center"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
             >
-              <div className="w-14 h-14 bg-institutional/10 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-14 h-14 bg-institutional/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
                 <m.icon className="w-7 h-7 text-institutional" />
               </div>
               <h3 className="font-bold text-lg text-foreground mb-2">{m.title}</h3>

@@ -18,17 +18,17 @@ const testimonials = [
 
 const TestimonialsSection = () => {
   return (
-    <section className="py-16 md:py-24 px-4 bg-background">
+    <section className="py-20 md:py-28 px-4 bg-background">
       <div className="container mx-auto max-w-5xl">
         <motion.h2
-          className="text-3xl md:text-4xl font-bold text-center text-foreground mb-4"
+          className="text-3xl md:text-4xl font-semibold text-center text-foreground mb-4"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
           O que nossos clientes dizem
         </motion.h2>
-        <p className="text-center text-muted-foreground mb-12">
+        <p className="text-center text-muted-foreground mb-14">
           Avaliação média <span className="font-bold text-foreground">4,9</span> no Google
         </p>
 
@@ -36,7 +36,7 @@ const TestimonialsSection = () => {
           {testimonials.map((t, i) => (
             <motion.div
               key={i}
-              className="p-6 rounded-xl bg-card border border-border"
+              className="p-6 rounded-2xl bg-card shadow-sm hover:shadow-md transition-shadow duration-300"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}

@@ -6,7 +6,6 @@ import GuaranteeSection from "@/components/GuaranteeSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
-import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 
 const Index = () => {
   return (
@@ -19,7 +18,6 @@ const Index = () => {
       <TestimonialsSection />
       <CTASection />
       <Footer />
-      <FloatingWhatsApp />
     </div>
   );
 };
