@@ -170,8 +170,8 @@ const AboutSection = () => {
                 viewport={{ once: true }}
                 transition={{ delay: 0.2 }}
               >
-                <Counter target={1000} suffix="" />
-                <p className="text-muted-foreground mt-2 text-sm">clientes atendidos</p>
+                <Counter target={2400} suffix="" />
+                <p className="text-muted-foreground mt-2 text-sm">famílias atendidas</p>
               </motion.div>
               <motion.div
                 className="bg-gray-light rounded-2xl p-6 text-center"
