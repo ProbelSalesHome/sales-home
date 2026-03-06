@@ -99,8 +99,8 @@ const HeroSection = () => {
             whileHover={{ scale: 1.04 }}
             whileTap={{ scale: 0.97 }}
           >
-            <MessageCircle className="w-5 h-5" />
-            Falar com especialista agora
+            <MessageCircle className="w-5 h-5 shrink-0" />
+            <span className="whitespace-nowrap">Falar com especialista agora</span>
           </motion.button>
         </motion.div>
 
@@ -129,19 +129,23 @@ const HeroSection = () => {
 
         {/* Security Micro-copy */}
         <motion.div
-          className="flex flex-wrap gap-x-4 gap-y-1 justify-center text-sm opacity-60"
+          className="flex flex-col md:flex-row gap-3 md:gap-6 items-center justify-center text-sm opacity-70"
           initial={{ opacity: 0 }}
-          animate={{ opacity: 0.6 }}
+          animate={{ opacity: 0.7 }}
           transition={{ duration: 0.6, delay: 1.5 }}
         >
           <span className="inline-flex items-center gap-1.5">
-            <ShieldCheck className="w-3.5 h-3.5" />
+            <ShieldCheck className="w-3.5 h-3.5 text-gold" />
             Sem compromisso
           </span>
-          <span>·</span>
-          <span>Atendimento humanizado</span>
-          <span>·</span>
-          <span>Troca garantida</span>
+          <span className="inline-flex items-center gap-1.5">
+            <MessageCircle className="w-3.5 h-3.5 text-gold" />
+            Atendimento humanizado
+          </span>
+          <span className="inline-flex items-center gap-1.5">
+            <CheckCircle className="w-3.5 h-3.5 text-gold" />
+            Troca garantida
+          </span>
         </motion.div>
       </div>
     </section>
