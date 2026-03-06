@@ -99,8 +99,8 @@ const HeroSection = () => {
             whileHover={{ scale: 1.04 }}
             whileTap={{ scale: 0.97 }}
           >
-            <MessageCircle className="w-5 h-5" />
-            Falar com especialista agora
+            <MessageCircle className="w-5 h-5 shrink-0" />
+            <span className="whitespace-nowrap">Falar com especialista agora</span>
           </motion.button>
         </motion.div>
 
