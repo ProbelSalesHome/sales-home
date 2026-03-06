@@ -10,7 +10,7 @@ const stores = [
     cnpj: "52.295.028/0002-88",
     phone: "(11) 98814-4671",
     phoneLink: "tel:+5511988144671",
-    whatsapp: "https://wa.me/5511988144671",
+    whatsapp: "https://wa.me/5511988144671?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es",
     maps: "https://www.google.com/maps/place/Probel+Exclusiva+-+Autonomista/@-23.535218,-46.7842654,17z/data=!3m1!4b1!4m6!3m5!1s0x94ceff0932ed118f:0xeea5b47c467841e!8m2!3d-23.5352229!4d-46.7816905!16s%2Fg%2F11f03zxg4h?entry=ttu&g_ep=EgoyMDI2MDIyNS4wIKXMDSoASAFQAw%3D%3D",
     rating: "4,9",
   },
