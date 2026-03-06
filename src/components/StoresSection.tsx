@@ -22,7 +22,7 @@ const stores = [
     cnpj: "28.333.867/0002-69",
     phone: "(11) 99140-3080",
     phoneLink: "tel:+5511991403080",
-    whatsapp: "https://wa.me/5511991403080",
+    whatsapp: "https://wa.me/5511991403080?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es",
     maps: "https://www.google.com/maps/place/Probel+Exclusiva+-+Shopping+Uni%C3%A3o/@-23.5369738,-46.7672379,17z/data=!3m1!4b1!4m6!3m5!1s0x94ceff40ffdf2849:0xfc8012c141631b3a!8m2!3d-23.5369787!4d-46.764663!16s%2Fg%2F11c6qhqqvq?entry=ttu&g_ep=EgoyMDI2MDIyNS4wIKXMDSoASAFQAw%3D%3D",
     rating: "4,9",
   },
