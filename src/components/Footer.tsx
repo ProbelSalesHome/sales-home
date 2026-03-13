@@ -44,7 +44,7 @@ const Footer = () => {
 
         <div className="border-t border-primary-foreground/20 pt-6 text-center text-xs opacity-60">
           <p>© {new Date().getFullYear()} Sales Home – Probel Exclusiva. Todos os direitos reservados.</p>
-          <a href="#" className="hover:underline mt-1 inline-block">Política de Privacidade</a>
+          <p className="mt-2">Site criado por <a href="https://www.giovannemorais.com.br/" target="_blank" rel="noopener noreferrer" className="text-gold hover:underline">Giovanne Morais</a></p>
         </div>
       </div>
     </footer>
