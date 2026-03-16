@@ -21,7 +21,7 @@ const HeroSection = () => {
   ];
 
   return (
-    <section className="bg-institutional text-primary-foreground py-24 md:py-36 px-4 relative overflow-hidden">
+    <section className="bg-institutional text-primary-foreground py-24 md:py-36 px-6 md:px-4 relative overflow-hidden">
       <motion.div
         className="absolute top-0 right-0 w-96 h-96 rounded-full bg-gold/5 blur-3xl"
         animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.5, 0.3] }}
@@ -67,7 +67,7 @@ const HeroSection = () => {
 
         {/* Proof Pills */}
         <motion.div
-          className="flex flex-wrap gap-3 justify-center mb-12"
+          className="flex flex-col sm:flex-row flex-wrap gap-3 justify-center items-center mb-12 px-2"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.8 }}
@@ -95,7 +95,7 @@ const HeroSection = () => {
         >
           <motion.button
             onClick={scrollToStores}
-            className="inline-flex items-center justify-center gap-2.5 bg-gold hover:bg-gold-dark text-primary-foreground font-semibold px-10 py-4.5 rounded-xl text-lg transition-colors shadow-lg shadow-gold/30 active:scale-[0.98]"
+            className="inline-flex items-center justify-center gap-2.5 bg-gold hover:bg-gold-dark text-primary-foreground font-semibold px-8 sm:px-10 py-4.5 rounded-xl text-base sm:text-lg transition-colors shadow-lg shadow-gold/30 active:scale-[0.98] max-w-full"
             whileHover={{ scale: 1.04 }}
             whileTap={{ scale: 0.97 }}
           >
