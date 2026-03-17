@@ -1,4 +1,6 @@
 import { motion } from "framer-motion";
+import { TEXTOS_HOME } from "@/content/textos-home";
+import { BOTOES } from "@/config/config-layout";
 
 const CTASection = () => {
   const scrollToStores = () => {
@@ -14,7 +16,7 @@ const CTASection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          Está na hora de voltar a dormir bem.
+          {TEXTOS_HOME.cta.titulo}
         </motion.h2>
 
         <motion.button
@@ -27,7 +29,7 @@ const CTASection = () => {
           viewport={{ once: true }}
           transition={{ delay: 0.15 }}
         >
-          👉 Escolher Minha Loja
+          {BOTOES.ctaFinal}
         </motion.button>
       </div>
     </section>

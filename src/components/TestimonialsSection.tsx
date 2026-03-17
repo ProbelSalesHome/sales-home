@@ -1,44 +1,9 @@
 import { Star, ChevronLeft, ChevronRight, BadgeCheck } from "lucide-react";
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { TEXTOS_HOME } from "@/content/textos-home";
 
-const testimonials = [
-  {
-    name: "Mariana S.",
-    date: "02/01/26",
-    title: "Durmo muito melhor",
-    text: "Atendimento incrível! Me ajudaram a escolher o colchão perfeito. Durmo muito melhor agora. Super recomendo!",
-    product: "Colchão Probel Guarda Costas",
-  },
-  {
-    name: "Carlos R.",
-    date: "01/15/26",
-    title: "Entrega impecável",
-    text: "Entrega rápida, montaram tudo no quarto. Equipe super educada e prestativa. Nota 10 em tudo!",
-    product: "Colchão Probel Masterpiece",
-  },
-  {
-    name: "Fernanda L.",
-    date: "12/20/25",
-    title: "Experiência incrível",
-    text: "Melhor experiência de compra que já tive. O café na loja foi um charme! Recomendo demais para todos.",
-    product: "Colchão Probel Evolution",
-  },
-  {
-    name: "Roberto M.",
-    date: "11/28/25",
-    title: "Qualidade excepcional",
-    text: "Produto de altíssima qualidade. Minha dor nas costas melhorou muito depois que troquei o colchão. Valeu cada centavo.",
-    product: "Colchão Probel Guarda Costas",
-  },
-  {
-    name: "Ana Paula C.",
-    date: "11/10/25",
-    title: "Recomendo de olhos fechados",
-    text: "Já é meu segundo colchão comprado aqui. Atendimento consultivo de verdade, sem pressão. Adorei!",
-    product: "Colchão Probel Masterpiece",
-  },
-];
+const testimonials = TEXTOS_HOME.depoimentos.lista;
 
 const TestimonialsSection = () => {
   const [startIndex, setStartIndex] = useState(0);
@@ -60,7 +25,7 @@ const TestimonialsSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          Gente de verdade falando sobre a experiência
+          {TEXTOS_HOME.depoimentos.titulo}
         </motion.h2>
 
         {/* Rating summary */}
@@ -71,7 +36,7 @@ const TestimonialsSection = () => {
             ))}
           </div>
           <span className="text-muted-foreground text-sm font-medium">
-            4,9 no Google · +2.400 avaliações
+            {TEXTOS_HOME.depoimentos.resumo}
           </span>
         </div>
 

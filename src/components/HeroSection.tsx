@@ -1,5 +1,8 @@
 import { MessageCircle, Star, CheckCircle, Truck, ShieldCheck } from "lucide-react";
 import { motion } from "framer-motion";
+import { TEXTOS_HOME } from "@/content/textos-home";
+import { BOTOES } from "@/config/config-layout";
+import { LOJA } from "@/config/config-loja";
 
 const avatars = [
   "https://randomuser.me/api/portraits/women/44.jpg",
@@ -14,11 +17,14 @@ const HeroSection = () => {
     document.getElementById("lojas")?.scrollIntoView({ behavior: "smooth" });
   };
 
-  const pills = [
-    { icon: CheckCircle, text: "10 noites de teste" },
-    { icon: Star, text: "4,9 ⭐ no Google" },
-    { icon: Truck, text: "Entrega no seu quarto" },
-  ];
+  const pillIcons = [CheckCircle, Star, Truck];
+
+  const pills = TEXTOS_HOME.hero.proofPills.map((text, i) => ({
+    icon: pillIcons[i],
+    text,
+  }));
+
+  const microcopyIcons = [ShieldCheck, MessageCircle, CheckCircle];
 
   return (
     <section className="bg-institutional text-primary-foreground py-24 md:py-36 px-6 md:px-4 relative overflow-hidden">
@@ -35,8 +41,8 @@ const HeroSection = () => {
 
       <div className="container mx-auto max-w-5xl text-center relative z-10">
         <motion.img
-          src="/images/logo-probel.png"
-          alt="Sales Home – Probel Exclusiva"
+          src={LOJA.logoSrc}
+          alt={LOJA.logoAlt}
           className="h-20 md:h-28 mx-auto mb-14 drop-shadow-lg"
           initial={{ opacity: 0, scale: 0.8, y: -30 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -50,9 +56,9 @@ const HeroSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
         >
-          Durma bem toda noite.
+          {TEXTOS_HOME.hero.titulo}
           <br />
-          <span className="text-gold">Escolha o colchão certo pra você.</span>
+          <span className="text-gold">{TEXTOS_HOME.hero.tituloDestaque}</span>
         </motion.h1>
 
         {/* Subheadline */}
@@ -62,7 +68,7 @@ const HeroSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.6, ease: "easeOut" }}
         >
-          Nossos especialistas te ajudam a escolher, você tem 10 noites para testar em casa e se não gostar, a gente troca. Simples assim.
+          {TEXTOS_HOME.hero.subtitulo}
         </motion.p>
 
         {/* Proof Pills */}
@@ -100,7 +106,7 @@ const HeroSection = () => {
             whileTap={{ scale: 0.97 }}
           >
             <MessageCircle className="w-5 h-5 shrink-0" />
-            <span className="whitespace-nowrap">Falar com especialista agora</span>
+            <span className="whitespace-nowrap">{BOTOES.heroCTA}</span>
           </motion.button>
         </motion.div>
 
@@ -123,7 +129,7 @@ const HeroSection = () => {
             ))}
           </div>
           <p className="text-base md:text-lg font-medium opacity-95">
-            +2.400 famílias já dormem melhor com a Probel Sales Home
+            {TEXTOS_HOME.hero.socialProof}
           </p>
         </motion.div>
 
@@ -134,18 +140,15 @@ const HeroSection = () => {
           animate={{ opacity: 0.7 }}
           transition={{ duration: 0.6, delay: 1.5 }}
         >
-          <span className="inline-flex items-center gap-1.5">
-            <ShieldCheck className="w-3.5 h-3.5 text-gold" />
-            Sem compromisso
-          </span>
-          <span className="inline-flex items-center gap-1.5">
-            <MessageCircle className="w-3.5 h-3.5 text-gold" />
-            Atendimento humanizado
-          </span>
-          <span className="inline-flex items-center gap-1.5">
-            <CheckCircle className="w-3.5 h-3.5 text-gold" />
-            Troca garantida
-          </span>
+          {TEXTOS_HOME.hero.microcopy.map((text, i) => {
+            const Icon = microcopyIcons[i];
+            return (
+              <span key={i} className="inline-flex items-center gap-1.5">
+                <Icon className="w-3.5 h-3.5 text-gold" />
+                {text}
+              </span>
+            );
+          })}
         </motion.div>
       </div>
     </section>

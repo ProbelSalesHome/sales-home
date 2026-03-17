@@ -1,5 +1,9 @@
 import { Shield, Truck, Headphones, MessageCircle } from "lucide-react";
 import { motion } from "framer-motion";
+import { TEXTOS_HOME } from "@/content/textos-home";
+import { BOTOES } from "@/config/config-layout";
+
+const guaranteeIcons = [Shield, Truck, Headphones];
 
 const GuaranteeSection = () => {
   const scrollToStores = () => {
@@ -15,19 +19,17 @@ const GuaranteeSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          10 Noites para Testar. <span className="text-gold">Sem Risco.</span>
+          {TEXTOS_HOME.garantia.titulo} <span className="text-gold">{TEXTOS_HOME.garantia.tituloDestaque}</span>
         </motion.h2>
 
         <motion.p
-          className="text-lg opacity-90 mb-12 max-w-xl mx-auto leading-relaxed"
+          className="text-lg opacity-90 mb-12 max-w-xl mx-auto leading-relaxed whitespace-pre-line"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.1 }}
         >
-          Se não se adaptar, você pode trocar por outro modelo.
-          <br />
-          Porque acreditamos no que vendemos.
+          {TEXTOS_HOME.garantia.subtitulo}
         </motion.p>
 
         <motion.div
@@ -37,16 +39,15 @@ const GuaranteeSection = () => {
           viewport={{ once: true }}
           transition={{ delay: 0.2 }}
         >
-          {[
-            { icon: Shield, text: "Marca com mais de 85 anos" },
-            { icon: Truck, text: "Entrega responsável" },
-            { icon: Headphones, text: "Atendimento especializado" },
-          ].map((item, i) => (
-            <div key={i} className="flex items-center gap-3 justify-center">
-              <item.icon className="w-5 h-5 text-gold" />
-              <span className="text-sm md:text-base">{item.text}</span>
-            </div>
-          ))}
+          {TEXTOS_HOME.garantia.itens.map((text, i) => {
+            const Icon = guaranteeIcons[i];
+            return (
+              <div key={i} className="flex items-center gap-3 justify-center">
+                <Icon className="w-5 h-5 text-gold" />
+                <span className="text-sm md:text-base">{text}</span>
+              </div>
+            );
+          })}
         </motion.div>
 
         <motion.button
@@ -60,7 +61,7 @@ const GuaranteeSection = () => {
           transition={{ delay: 0.3 }}
         >
           <MessageCircle className="w-5 h-5" />
-          Falar com Especialista
+          {BOTOES.garantiaCTA}
         </motion.button>
       </div>
     </section>
